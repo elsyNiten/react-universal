@@ -1,0 +1,28 @@
+{
+  "title" : "Home Page",
+  "subtitle" : "This is a great page",
+  "articles": [
+    {
+      "id": 1,
+      "title": "Article 1",
+      "subtitle": "First article",
+      "author": {
+        "name": "John",
+        "lastname": "Doe"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Article 2",
+      "subtitle": "Second article",
+      "author": {
+        "name": "James",
+        "lastname": "Foo"
+      }
+    }
+  ],
+  "image": {
+    "url": "www.image.com/image.jpg",
+    "alt": "my home page cover image"
+  }
+}
