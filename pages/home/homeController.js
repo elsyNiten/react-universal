@@ -1,6 +1,5 @@
 import mapper from'mapper.js';
 import React from'react';
-import ReactDOM from'react-dom';
 import ReactDOMServer from 'react-dom/server';
 
 //component
@@ -18,6 +17,8 @@ module.exports = (req, res, next) => {
     subtitle: true,
     image: true,
     articles: [{
+      title: true,
+      id: true,
       author: {
         name: true,
         lastname: true
@@ -28,7 +29,7 @@ module.exports = (req, res, next) => {
   const pureData = mapper(data, schema);
 
   const html = ReactDOMServer.renderToString(
-    <Wrapper pureData={pureData}>
+    <Wrapper className="Home" pureData={pureData}>
       <Home {...pureData} />
     </Wrapper>
   );
