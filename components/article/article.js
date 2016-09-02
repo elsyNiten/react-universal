@@ -1,12 +1,16 @@
-const React = require('react');
-  var x = require("./article.css");
+import React from 'react';
+import style from './article.css';
 
 export default React.createClass({
+
+  componentDidMount: () => {
+    alert('Mount !!!');
+  },
 
   render: function() {
 
     return (
-      <div className={x.article}>
+      <div className={style.article} onClick={ () => alert('toto') }>
         <h3>{this.props.title}</h3>
         <p>author : {this.props.author.name} {this.props.author.lastname}</p>
       </div>

@@ -28,9 +28,11 @@ module.exports = (req, res, next) => {
 
   const pureData = mapper(data, schema);
 
-  const html = ReactDOMServer.renderToString(
-    <Wrapper className="Home" pureData={pureData}>
-      <Home {...pureData} />
+  const homeComponent =  ReactDOMServer.renderToString(<Home {...pureData} />);
+
+  const html = ReactDOMServer.renderToStaticMarkup(
+    <Wrapper className="Home" pureData={JSON.stringify(pureData)}>
+      {homeComponent}
     </Wrapper>
   );
 

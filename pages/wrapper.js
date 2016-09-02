@@ -14,11 +14,10 @@ export default React.createClass({
             <meta name="MobileOptimized" content="320"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
             <link href="/main.css" rel="stylesheet" type="text/css" />
-            <script dangerouslySetInnerHTML={{__html: 'window.pureData = ' + JSON.stringify(this.props.pureData)}} />
+            <script dangerouslySetInnerHTML={{__html: 'window.pureData = ' + this.props.pureData}} />
           </head>
         	<body>
-            <div className={`js-${this.props.className}`}>
-              {this.props.children}
+            <div className={`js-${this.props.className}`} dangerouslySetInnerHTML={{__html: this.props.children}}>
             </div>
             <script src="/front.bundle.js"/>
           </body>
