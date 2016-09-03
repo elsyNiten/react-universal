@@ -3,10 +3,6 @@ import style from './article.css';
 
 export default React.createClass({
 
-  componentDidMount: () => {
-    alert('Mount !!!');
-  },
-
   render: function() {
 
     return (

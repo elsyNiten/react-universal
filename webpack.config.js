@@ -10,7 +10,6 @@ module.exports = {
          loaders: [
            {
              test: /\.js$/,
-             exclude: /node_modules/,
              loader: 'babel-loader',
              query: {
               presets: ['es2015', 'react']
@@ -22,7 +21,7 @@ module.exports = {
          },
          {
            test: /\.css$/,
-           loader: ExtractTextPlugin.extract("css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]")         
+           loader: ExtractTextPlugin.extract("css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]")
          }
        ]
      },
