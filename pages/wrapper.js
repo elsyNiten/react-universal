@@ -20,7 +20,7 @@ export default React.createClass({
         	<body>
             <div className="js-root" dangerouslySetInnerHTML={{__html: this.props.children}}>
             </div>
-            <script src="/front.bundle.js"/>
+            <script src="/client.bundle.js"/>
           </body>
         </html>
     );

@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import path from 'path';
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.get('/', require('./pages/home/homeController'));
 
 // static file serving
 app.use(require('compression')());
-app.use(express.static(__dirname + '/.tmp', { maxAge: 31536000000 }));
+app.use(express.static(__dirname + '/../.tmp', { maxAge: 31536000000 }));
 
 app.listen(process.env.PORT || 1337, () => {
   console.log(`server started ➜ http://localhost:${process.env.PORT || 1337}`);
