@@ -13,7 +13,7 @@ export default React.createClass({
             <meta name="HandheldFriendly" content="true"/>
             <meta name="MobileOptimized" content="320"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-            <link href="/main.css" rel="stylesheet" type="text/css" />
+            <link href="/style.bundle.css" rel="stylesheet" type="text/css" />
             <script dangerouslySetInnerHTML={{__html: `window.pureData = ${this.props.pureData};` }} />
             <script dangerouslySetInnerHTML={{__html: `window.pageComponent = '${this.props.component}';` }} />
           </head>
