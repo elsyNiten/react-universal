@@ -7,9 +7,8 @@ var jsLoader = {
   test: /\.js$/,
   loader: 'babel-loader',
   query: {
-   presets: ['es2015', 'react'],
-   babelrc: false
- }
+   presets: ['es2015', 'react']
+  }
 };
 
 var jsonLoader = {
