@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --server && webpack --client && node build/server.bundle.js",
-    "client": "webpack --client --watch"
+    "start": "webpack && nodemon build/server.bundle.js",
+    "watch": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
@@ -36,6 +36,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "ignore-styles": "^5.0.1",
     "json-loader": "^0.5.4",
+    "nodemon": "^1.10.2",
     "postcss-modules": "^0.5.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
