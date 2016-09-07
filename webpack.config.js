@@ -1,7 +1,6 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var nodeExternals = require('webpack-node-externals');
 
-
 var jsLoader = {
   test: /\.js$/,
   loader: 'babel-loader',
@@ -29,9 +28,18 @@ var clientConfig = {
          jsonLoader,
          {
            test: /\.css$/,
-           loader: ExtractTextPlugin.extract("css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]")
+           loader: ExtractTextPlugin.extract("css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader")
          }
        ]
+    },
+    postcss: function(webpack) {
+        return {
+            plugins: [
+              require("postcss-import")(),
+              require("postcss-url")(),
+              require("postcss-cssnext")()
+            ]
+        };
     },
     plugins: [ new ExtractTextPlugin("style.bundle.css") ]
  };

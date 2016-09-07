@@ -334,7 +334,7 @@
 	        } },
 	      _react2.default.createElement(
 	        'h3',
-	        null,
+	        { className: _article2.default.title },
 	        this.props.title
 	      ),
 	      _react2.default.createElement(
@@ -354,7 +354,8 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		"article": "article__article___3uxoa"
+		"article": "article__article___3uxoa",
+		"title": "article__title___IYjK0"
 	};
 
 /***/ },
@@ -431,7 +432,7 @@
 			}
 		],
 		"image": {
-			"url": "www.image.com/image.jpg",
+			"url": "https://camo.githubusercontent.com/0cd910e76658429374539a8d72a0608783918aae/68747470733a2f2f7261776769742e636f6d2f676f72616e67616a69632f72656163742d69636f6e732f6d61737465722f72656163742d69636f6e732e737667",
 			"alt": "my home page cover image"
 		}
 	};

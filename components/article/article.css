@@ -1,3 +1,10 @@
+@import  "./../../theme/theme.css";
+
 .article {
-  background : red;
+  color: var(--main-bg-color);
+  @apply --h1;
+
+  & .title {
+    color: blue;
+  }
 }
