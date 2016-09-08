@@ -70,7 +70,7 @@
 	app.get('/', __webpack_require__(5));
 
 	// static file serving
-	app.use(__webpack_require__(16)());
+	app.use(__webpack_require__(17)());
 	app.use(_express2.default.static(__dirname + '/../.tmp', { maxAge: 31536000000 }));
 
 	app.listen(process.env.PORT || 1337, function () {
@@ -123,11 +123,11 @@
 
 	var _home2 = _interopRequireDefault(_home);
 
-	var _wrapper = __webpack_require__(14);
+	var _wrapper = __webpack_require__(15);
 
 	var _wrapper2 = _interopRequireDefault(_wrapper);
 
-	var _data = __webpack_require__(15);
+	var _data = __webpack_require__(16);
 
 	var _data2 = _interopRequireDefault(_data);
 
@@ -203,7 +203,7 @@
 
 	var _banner2 = _interopRequireDefault(_banner);
 
-	var _articlesList = __webpack_require__(11);
+	var _articlesList = __webpack_require__(12);
 
 	var _articlesList2 = _interopRequireDefault(_articlesList);
 
@@ -241,6 +241,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _banner = __webpack_require__(11);
+
+	var _banner2 = _interopRequireDefault(_banner);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
@@ -253,21 +257,31 @@
 	      null,
 	      _react2.default.createElement(
 	        'h1',
-	        null,
+	        { className: _banner2.default.title },
 	        this.props.title
 	      ),
 	      _react2.default.createElement(
 	        'h2',
-	        null,
+	        { className: _banner2.default.subtitle },
 	        this.props.subtitle
 	      ),
-	      _react2.default.createElement('img', { alt: this.props.image.alt, src: this.props.image.url })
+	      _react2.default.createElement('img', { className: _banner2.default.image, alt: this.props.image.alt, src: this.props.image.url })
 	    );
 	  }
 	});
 
 /***/ },
 /* 11 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"title": "banner__title___3fuSx",
+		"subtitle": "banner__subtitle___3-9c5",
+		"image": "banner__image___1WXyI"
+	};
+
+/***/ },
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -280,7 +294,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _article = __webpack_require__(12);
+	var _article = __webpack_require__(13);
 
 	var _article2 = _interopRequireDefault(_article);
 
@@ -302,7 +316,7 @@
 	});
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -315,7 +329,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _article = __webpack_require__(13);
+	var _article = __webpack_require__(14);
 
 	var _article2 = _interopRequireDefault(_article);
 
@@ -339,8 +353,7 @@
 	      ),
 	      _react2.default.createElement(
 	        'p',
-	        null,
-	        'author : ',
+	        { className: _article2.default.author },
 	        this.props.author.name,
 	        ' ',
 	        this.props.author.lastname
@@ -350,16 +363,17 @@
 	});
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 	module.exports = {
 		"article": "article__article___3uxoa",
-		"title": "article__title___IYjK0"
+		"title": "article__title___IYjK0",
+		"author": "article__author___3-SMq"
 	};
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -405,7 +419,7 @@
 	});
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -438,7 +452,7 @@
 	};
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports) {
 
 	module.exports = require("compression");

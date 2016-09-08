@@ -6,7 +6,8 @@ var jsLoader = {
   loader: 'babel-loader',
   query: {
    presets: ['es2015', 'react']
-  }
+ },
+ exclude: /node_modules/
 };
 
 var jsonLoader = {
@@ -35,7 +36,7 @@ var clientConfig = {
     postcss: function(webpack) {
         return {
             plugins: [
-              require("postcss-import")(),
+              require("postcss-import")({ addDependencyTo: webpack }),
               require("postcss-url")(),
               require("postcss-cssnext")()
             ]

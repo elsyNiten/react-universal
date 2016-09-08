@@ -1,7 +1,6 @@
-:root {
-  --main-bg-color: brown;
+@import  "./variables.css";
 
-  --h1 {
-    font-size:32px;
-  }
+body {
+  background: #fcfcfc;
+  color: var(--text-color);
 }

@@ -1,0 +1,17 @@
+@import  "./../../theme/variables.css";
+
+.title {
+  text-align: center;
+  font-size: 42px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 32px;
+}
+
+.image {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
