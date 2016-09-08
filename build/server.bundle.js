@@ -344,7 +344,7 @@
 	    return _react2.default.createElement(
 	      'div',
 	      { className: _article2.default.article, onClick: function onClick() {
-	          return alert('toto');
+	          return alert('OK Bro');
 	        } },
 	      _react2.default.createElement(
 	        'h3',

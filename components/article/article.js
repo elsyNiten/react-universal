@@ -6,7 +6,7 @@ export default React.createClass({
   render: function() {
 
     return (
-      <div className={style.article} onClick={ () => alert('toto') }>
+      <div className={style.article} onClick={ () => alert('OK Bro') }>
         <h3 className={style.title} >{this.props.title}</h3>
         <p className={style.author} >{this.props.author.name} {this.props.author.lastname}</p>
       </div>

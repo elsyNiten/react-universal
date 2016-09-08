@@ -2,10 +2,14 @@
 
 .article {
   float: left;
-  width: 50%;
+  width: 100%;
   border: 1px solid var(--main-color);
   padding: 30px;
   box-sizing: border-box;
+
+  @media (min-width: 500px) {
+    width: 50%;
+  }
 }
 
 .title {
