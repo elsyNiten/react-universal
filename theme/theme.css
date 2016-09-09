@@ -1,4 +1,4 @@
-@import  "./variables.css";
+@import "theme/variables.css";
 
 body {
   background: #fcfcfc;

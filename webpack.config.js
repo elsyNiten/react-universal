@@ -1,5 +1,6 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var nodeExternals = require('webpack-node-externals');
+var path = require('path');
 
 var jsLoader = {
   test: /\.js$/,
@@ -13,6 +14,10 @@ var jsLoader = {
 var jsonLoader = {
   test: /\.json$/,
   loader: 'json-loader'
+};
+
+var resolver = {
+  alias: { "components": path.resolve('./components') }
 };
 
 
@@ -36,14 +41,15 @@ var clientConfig = {
     postcss: function(webpack) {
         return {
             plugins: [
-              require("postcss-import")({ addDependencyTo: webpack }),
+              require("postcss-import")({ path: ['./'],addDependencyTo: webpack }),
               require("postcss-url")(),
               require("postcss-cssnext")()
             ]
         };
     },
-    plugins: [ new ExtractTextPlugin("style.bundle.css") ]
- };
+    plugins: [ new ExtractTextPlugin("style.bundle.css") ],
+    resolve: resolver
+   };
 
  var serverConfig = {
     name: 'server',
@@ -66,7 +72,8 @@ var clientConfig = {
           loader: "css-loader/locals?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]"
         }
       ]
-    }
+    },
+    resolve: resolver
   };
 
 

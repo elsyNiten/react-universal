@@ -1,7 +1,7 @@
 import React from 'react';
 //components
-import Banner from "./../../components/banner/banner";
-import ArticlesList from "./../../components/articlesList/articlesList";
+import Banner from "components/banner/banner";
+import ArticlesList from "components/articlesList/articlesList";
 
 export default React.createClass({
 

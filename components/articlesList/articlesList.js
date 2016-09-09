@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Article from "./../article/article";
+import Article from "components/article/article";
 
 export default React.createClass({
 
